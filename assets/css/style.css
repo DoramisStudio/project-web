@@ -65,7 +65,7 @@ body {
 	left: 15px;
 }
 #gallery-btn:hover::after, #our-project-btn:hover::after{
-    width: calc(100% - (40px));
+    width: calc(100% - (30px));
 }
 .main-navigation input {
     width: 170px;
