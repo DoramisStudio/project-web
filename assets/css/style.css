@@ -1,9 +1,14 @@
+html{
+    background-image: url(../img/Gojo-Satoru.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 body {
     margin: 0;
     -webkit-user-select: none;
     user-select: none;
     -moz-user-select: none;
-}
+}    
 
 .main-navigation {
     background-color: rgb(0, 0, 0);
@@ -21,27 +26,51 @@ body {
 }
 
 .main-navigation button {
+    position: relative;
     color: rgb(120, 120, 120);
     text-align: center;
     background-color: transparent;
     border: none;
+    border-radius: 30px;
     height: 35px;
     padding: 5px 15px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     font-size: 14px;
     margin: 15px 5px 0px 5px;
+    cursor: pointer; 
 }
 .main-navigation button:hover {
     background-color: rgb(231, 231, 231);
     color: black;
-    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+}
+.main-navigation button::after{
+    position: absolute;
+	content: "";
+	width: 0%;
+	height: 3px;
+	background-color: black;
+	left: 15px;
+	bottom: 6px;
+	transition: all 0.5s ease-in-out;
+}
+.main-navigation button:hover::after{
+	width: calc(100% - (15 * 2px));
+	left: 15px;
+}
+#gallery-btn:hover::after, #our-project-btn:hover::after{
+    width: calc(100% - (40px));
 }
 .main-navigation input {
     width: 170px;
     height: 30px;
     margin-right: 20px;
-    padding: 0px 8px;
+    padding: 0px 12px;
     border: 0px;
     border-radius: 20px;
+}
+.font-icon{
+    font-family: 'Segoe Fluent Icons'!important;
+    font-size: 9px!important;
 }
