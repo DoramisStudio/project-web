@@ -54,10 +54,10 @@ body {
     position: absolute;
 	content: "";
 	width: 0%;
-	height: 3px;
+	height: 2px;
 	background-color: black;
 	left: 15px;
-	bottom: 6px;
+	bottom: 2px;
 	transition: all 0.5s ease-in-out;
 }
 .main-navigation button:hover::after{
