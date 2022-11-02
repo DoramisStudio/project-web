@@ -1,3 +1,4 @@
+/*kalo gaada iconnya artinya gaada internet*/
 html{
     /* background-image: url(../img/Gojo-Satoru.jpg); */
     background-size: cover;
@@ -82,20 +83,51 @@ body {
     margin: auto;
     background-color: aqua;
 }
+.slide-image{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+}
 #content-img-1{
     width: 100%;
     height: 100%;
     display: block;
     margin: auto;
 }
-#arrow-left, #arrow-right{
+.arrow-left-btn, .arrow-right-btn{
+    background-color: transparent;
     position: absolute;
-    top: 425px;
-    font-size: 60px;
+    border: 0px;
+    top: 65px;
+    width: 5%;
+    height: 100%;
+    font-size: 40px;
 }
-#arrow-left{
-    left: 1%;
+.arrow-left-btn:hover, .arrow-right-btn:hover{
+    background-color: rgba(137, 137, 137, 0.427);
 }
-#arrow-right{
-    right: 1%;
+.arrow-right-btn{
+    padding-right: 10px;
+    right: 0;
+}
+.arrow-left-btn{
+    padding-left: 10px;
+}
+.footer-content{
+    height: 75px;
+    width: 100%;
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+}
+.footer-content a{
+    color: rgb(120, 120, 120);
+    text-decoration: none;
+    font-size: 20px;
+    margin: 25px 30px 0px 0px;
+}
+
+.imageSlideShow img {
+    position: relative;
+    width: 128px;
+    padding-top: 0%;
 }
