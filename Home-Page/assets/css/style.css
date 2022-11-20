@@ -1,0 +1,235 @@
+html{
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+br {display: block;}
+
+body {
+    margin: unset;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+    scrollbar-color: dark;
+}    
+
+.main-navigation {
+    background-color: rgb(0, 0, 0);
+    height: 64px;
+    text-align: right;
+}
+
+.main-navigation img {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    width: 90px;
+    height: 85px;
+    margin: 0px 100px 0px 0px;
+}
+.main-navigation button{
+    position: relative;
+    color: rgb(120, 120, 120);
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    height: 35px;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 15px 5px 0px 5px;
+    cursor: pointer; 
+}
+.main-navigation button a{
+    text-decoration: none;
+    color: rgb(120, 120, 120);
+}
+.main-navigation button:hover a{
+    color: rgb(255, 255, 255);
+}
+.main-navigation button::after{
+    position: absolute;
+	content: "";
+	width: 0%;
+	height: 3px;
+	background-color: rgb(255, 255, 255);
+	left: 15px;
+	bottom: 4px;
+	transition: all 0.4s ease-in-out;
+}
+.main-navigation button:hover::after{
+	width: calc(100% - (15 * 2px));
+	left: 15px;
+}
+#gallery-btn:hover::after, #our-project-btn:hover::after{
+    width: calc(100% - (40px));
+}
+.main-navigation input{
+    width: 170px;
+    height: 30px;
+    margin: 0px 15px 0px 10px;
+    padding: 0px 12px;
+    border: 0px;
+    outline: none;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.main-navigation input:focus{
+    outline: 2px solid rgb(90, 141, 199);
+}
+.main-content{
+    height: fit-content;
+    margin: auto;
+    /* background-color: aqua; */
+}
+.slide-image{
+    position: absolute;
+    top: 64px;
+    background-color: white;
+    width: 100%;
+    height: calc(100% - 64px);
+    overflow: hidden;
+}
+
+.slide-transition {
+    animation: ts-fade 1s ease-out forwards;    
+}
+
+@keyframes ts-fade {
+    from {
+        opacity: 0.0;
+        transform: scale(1.05);
+    }
+    to {
+        opacity: 1.0;
+        transform: scale(1.0);
+    }
+}
+#content-img-1{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+.arrow-left-btn, .arrow-right-btn{
+    background-color: transparent;
+    position: absolute;
+    border: 0px;
+    top: 0px;
+    width: 48px;
+    height: 100%;
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: 0.3s cubic-bezier(0,1.5,.7,1);
+}
+.arrow-left-btn:hover {
+    color: rgba(255, 255, 255, 1);
+    transform: translateX(-4px);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+.arrow-right-btn:hover {
+    color: rgba(255, 255, 255, 1);
+    transform: translateX(4px);
+    text-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+}
+.arrow-left-btn:active {
+    transform: translateX(-8px);
+}
+.arrow-right-btn:active {
+    transform: translateX(8px);
+}
+.arrow-right-btn{
+    padding-right: 10px;
+    right: 0;
+}
+.arrow-left-btn{
+    padding-left: 10px;
+}
+.imageSlideShow {
+    position: relative;
+    bottom: 0%;
+    overflow: hidden;
+}
+
+.imageSlideShow img {
+    position: relative;
+    width: 100%;
+    padding-top: 0%;
+}
+.footer-content{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+}
+.footer-content button{
+    position: relative;
+    margin: 36px 5px 0px 5px;
+    padding: 4px 8px;
+    background: transparent;
+    color: rgb(120, 120, 120);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.footer-content button:hover {
+    background: rgba(120, 120, 120, 0.5);
+    color: white;
+}
+
+.footer-content button::after{
+    position: absolute;
+	content: "";
+	width: 0%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.05);
+	left: 0px;
+	bottom: 0px;
+    border-radius: 4px;
+	transition: all 0.4s ease-in-out;
+}
+
+.footer-content button:hover::after{
+	width: 100%;
+	left: 0px;
+}
+
+.loadingDock {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    background: rgb(32, 32, 32);
+    color: white;
+    z-index: 100;
+    transition: 0.3s ease-out;
+}
+
+.hide {
+    opacity: 0.0;
+}
+
+.rainbowText {
+    animation: rt 1s linear forwards infinite;
+}
+
+@keyframes rt {
+    from {
+        color: rgb(255, 127, 127);
+        filter: hue-rotate(0deg);
+    }
+    to {
+        color: rgb(255, 127, 127);
+        filter: hue-rotate(359deg);
+    }
+}
