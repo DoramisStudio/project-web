@@ -1,0 +1,174 @@
+html{
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Fira Sans', sans-serif;
+}
+
+br {display: block;}
+
+body {
+    margin: unset;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+    scrollbar-color: dark;
+}    
+
+.main-navigation {
+    background-color: rgb(0, 0, 0);
+    height: 64px;
+    text-align: right;
+}
+.main-navigation img {
+    position: absolute;
+    top: -2px;
+    left: 8px;
+    width: 70px;
+    height: 70px;
+    margin: 0px 100px 0px 0px;
+}
+.main-navigation button{
+    position: relative;
+    color: rgb(120, 120, 120);
+    background-color: transparent;
+    border: none;
+    border-radius: 30px;
+    height: 35px;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    margin: 15px 5px 0px 5px;
+    cursor: pointer; 
+}
+.main-navigation button:hover{
+    color: rgba(255, 255, 255);
+}
+.main-navigation button::after{
+    position: absolute;
+	content: "";
+	width: 0%;
+	height: 3px;
+	background-color: rgb(255, 255, 255);
+	left: 15px;
+	bottom: 4px;
+	transition: all 0.4s ease-in-out;
+}
+.main-navigation button:hover::after{
+	width: calc(100% - (15 * 2px));
+	left: 15px;
+}
+#gallery-btn:hover::after, #our-project-btn:hover::after{
+    width: calc(100% - (40px));
+}
+.main-navigation button:active{
+    color: rgb(219, 219, 219);
+}
+.main-navigation input{
+    width: 170px;
+    height: 30px;
+    margin: 0px 15px 0px 10px;
+    padding: 0px 12px;
+    border: 0px;
+    outline: none;
+    border-radius: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+.main-navigation input:focus{
+    outline: 2px solid rgb(90, 141, 199);
+}
+.main-content{
+    padding-left: 50px;
+    padding-top: 80px;
+    height: fit-content;
+    background-color: rgb(237, 237, 237);
+}
+.image-preview{
+    display: inline-block;
+    text-align: center;
+    margin: 0px 70px 50px 70px;
+    width: fit-content;
+    background-color: rgb(161, 245, 254);
+    border-radius: 20px;
+}
+.image-preview button{
+    border: 0px;
+    border-radius: 20px;
+    background-color: rgb(161, 245, 254);
+}
+.image-preview button:hover{
+    background-color: rgb(142, 223, 234);
+}
+.image-preview button:active{
+    background-color: rgb(139, 207, 215)
+}
+.image-preview img{
+    margin-top: 4.5px;
+    height: 400px;
+    width: 300px;
+    border-radius: 20px;
+}
+.image-preview p{
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 18px;
+    background-color: rgb(161, 245, 254);
+}
+.footer-content{
+    height: 90px;
+    width: 100%;
+    background-color: rgb(23, 23, 23);
+    text-align: center;
+}
+.footer-content button{
+    position: relative;
+    margin: 36px 5px 0px 5px;
+    padding: 4px 8px;
+    background: transparent;
+    color: rgb(120, 120, 120);
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.footer-content button:hover {
+    background: rgba(120, 120, 120, 0.5);
+    color: white;
+}
+
+.footer-content button::after{
+    position: absolute;
+	content: "";
+	width: 0%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.05);
+	left: 0px;
+	bottom: 0px;
+    border-radius: 4px;
+	transition: all 0.4s ease-in-out;
+}
+
+.footer-content button:hover::after{
+	width: 100%;
+	left: 0px;
+}
+.loadingDock {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    background: rgb(32, 32, 32);
+    color: white;
+    z-index: 100;
+    transition: 0.3s ease-out;
+}
+
+.hide {
+    opacity: 0.0;
+}
